@@ -152,6 +152,7 @@
         this.socket.on("error", function (error) {
             that.emit("error", error);
         });
+        this.socket.setBroadcast(true);
 
         function onBound() {
             osc.UDPPort.setupMulticast(that);
